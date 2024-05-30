@@ -1,5 +1,0 @@
-#import necessary libraries
-import pandas as pd
-#read dataset
-df = pd.read_csv('Popular_Spotify_Songs.csv')
-df
