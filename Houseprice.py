@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pickle
+import os
 from sklearn.preprocessing import OneHotEncoder
 
 # Load the dataset
@@ -96,7 +97,11 @@ def main():
     # Display selected page
     if page == "House Price Prediction":
         # Header Image
-        st.image('AI-ML-Learning-Path/houseimage5.jpeg', use_column_width=True)
+        header_image_path = 'AI-ML-Learning-Path/houseimage5.jpeg'
+        if os.path.exists(header_image_path):
+            st.image(header_image_path, use_column_width=True)
+        else:
+            st.warning(f"Header image not found at {header_image_path}")
 
         # Custom CSS for background color
         st.markdown(
@@ -112,7 +117,12 @@ def main():
 
         # Sidebar for Input
         st.sidebar.title('ENTER HOUSE DETAILS')
-        st.sidebar.image('AI-ML-Learning-Path/houseimage2.jpeg', width=150, use_column_width=True)
+        sidebar_image_path = 'AI-ML-Learning-Path/houseimage2.jpeg'
+        if os.path.exists(sidebar_image_path):
+            st.sidebar.image(sidebar_image_path, width=150, use_column_width=True)
+        else:
+            st.sidebar.warning(f"Sidebar image not found at {sidebar_image_path}")
+
         longitude = st.sidebar.text_input('Longitude of Location')
         latitude = st.sidebar.text_input('Latitude of Location')
         housing_median_age = st.sidebar.text_input('Median Age House Value')
