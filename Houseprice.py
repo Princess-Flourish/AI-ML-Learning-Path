@@ -97,7 +97,7 @@ def main():
     # Display selected page
     if page == "House Price Prediction":
         # Header Image
-        header_image_path = 'AI-ML-Learning-Path\houseimage5.jpeg'
+        header_image_path = 'houseimage5.jpeg'
         if os.path.exists(header_image_path):
             st.image(header_image_path, use_column_width=True)
         else:
@@ -117,7 +117,7 @@ def main():
 
         # Sidebar for Input
         st.sidebar.title('ENTER HOUSE DETAILS')
-        sidebar_image_path = 'AI-ML-Learning-Path\houseimage2.jpeg'
+        sidebar_image_path = 'houseimage2.jpeg'
         if os.path.exists(sidebar_image_path):
             st.sidebar.image(sidebar_image_path, width=150, use_column_width=True)
         else:
